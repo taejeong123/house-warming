@@ -55,46 +55,6 @@ header nav ul li a {
 header nav ul li a:hover {
 	border-bottom: 1px solid #fff;
 }
-header .mobile-nav {
-	width: 100%;
-	background-color: #fff;
-	text-align: center;
-	margin-top: 15px;
-
-	display: none;
-}
-header .mobile-nav ul li {
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	transition: .1s;
-	cursor: pointer;
-	border-bottom: 1px solid #2c3e50;
-}
-header .mobile-nav ul li:hover {
-	background-color: #2c3e50;
-}
-header .mobile-nav ul li:hover a {
-	color: #fff;
-}
-header .nav-icon,
-header .nav-icon-close {
-	width: 100%;
-	height: 50px;
-	text-align: center;
-	line-height: 50px;
-	font-size: 30px;
-	color: #fff;
-	transition: .1s;
-	cursor: pointer;
-
-	display: none;
-}
-header .nav-icon:hover,
-header .nav-icon-close:hover {
-	background-color: #fff;
-	color: #2c3e50;
-}
 /*헤더 영역*/
 
 /*섹션 헤더 영역*/
@@ -434,113 +394,76 @@ section .container > .more-icon:hover {
 }
 /*전문가 영역*/
 
-/*전문가 시공 후기 영역*/
-#review {
-	width: 100%;
+/*디자인 예시*/
+#projects {
+	margin-bottom: 50px;
 }
-#review .review-box {
-	display: flex;
+#projects .projects-content {
+	margin-top: 50px;
 }
-#review .review-box a {
-	color: #999;
-}
-#review .review-box .review {
+#projects .projects-content .view {
 	position: relative;
-	width: 430px;
-	height: 400px;
-	box-shadow: 0px 1px 5px 1px rgba(0,0,0,.1);
+	width: 1200px;
+	height: 500px;
+	margin: 50px 0;
 }
-#review .review-box .review .img-box {
-	width: 100%;
-	height: 200px;
+#projects .projects-content .view:last-child {
+	margin-bottom: 100px;
 }
-#review .review-box .review .img-box img {
+#projects .projects-content .view.left {
+	float: left;
+}
+#projects .projects-content .view.left .view-content {
+	left: 1100px;
+}
+#projects .projects-content .view.right {
+	float: right;
+}
+#projects .projects-content .view.right .view-content {
+	left: 100px;
+}
+#projects .projects-content .view .view-inner {
+	width: 900px;
+	height: 500px;
+	box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .1);
+}
+#projects .projects-content .view .view-inner img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
-	filter: brightness(40%);
 }
-#review .review-box .review .writer-img {
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
-	overflow: hidden;
-	margin-top: -50px;
-}
-#review .review-box .review .writer-img img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	filter: brightness(90%);
-}
-#review .review-box .review .writer-box {
-	margin-top: 10px;
-	text-align: center;
-}
-#review .review-box .review .writer-box > div {
-	display: inline-block;
-}
-#review .review-box .review .writer-box .writer-name {
-	font-size: 20px;
-	font-weight: 500;
-}
-#review .review-box .review .writer-box .writer-id {
-	font-size: 13px;
-	cursor: pointer;
-	border-bottom: 1px solid transparent;
-}
-#review .review-box .review .writer-box .writer-id:hover {
-	border-bottom: 1px solid #999;
-}
-#review .review-box .review .info {
-	position: relative;
-	width: 85%;
-	height: 130px;
-}
-#review .review-box .review .info .info-inner {
-	display: flex;
-}
-#review .review-box .review .info .info-inner .star {
-	margin-left: 0;
-	display: inline-block;
-}
-#review .review-box .review .info .info-inner .star i {
-	color: orange;
-}
-#review .review-box .review .info .info-inner .cost {
-	margin-right: 0;
-	display: inline-block;
-	font-size: 20px;
-	font-weight: 500;
-}
-#review .review-box .review .info .content {
-	margin-top: 10px;
-}
-#review .review-box .review .info .spe-box {
+#projects .projects-content .view .view-content {
 	position: absolute;
-	bottom: 0;
-	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 300px;
+	height: 300px;
+	background-color: #fff;
+	margin-left: -150px;
+	border: 5px solid #fff;
 }
-#review .review-box .review .info .spe-box > div {
+#projects .projects-content .view .view-content .gradient-border {
+	box-sizing: border-box;
 	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-style: solid;
+	border-image: radial-gradient(ellipse at 50% 50%, #D1B464 0%, #FFFFAC 50%, #D1B464 100%);
+	border-image-slice: 1;
+	background: #f7f7f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-#review .review-box .review .info .spe-box .spe-name {
-	color: #444;
-	font-size: 13px;
+#projects .projects-content .view .view-content .gradient-border .title {
+	font-size: 20px;
+	letter-spacing: 5px;
 }
-#review .review-box .review .info .spe-box .spe-name span {
-	font-size: 16px;
-	font-weight: 500;
+#projects .projects-content .view .view-content .gradient-border .content {
+	font-size: 15px;
 }
-#review .review-box .review .info .spe-box .spe-id {
-	font-size: 11px;
-	cursor: pointer;
-	border-bottom: 1px solid transparent;
-}
-#review .review-box .review .info .spe-box .spe-id:hover {
-	border-bottom: 1px solid #999;
-}
-/*전문가 시공 후기 영역*/
+/*디자인 예시*/
 
 /*푸터 영역*/
 footer {
@@ -582,79 +505,3 @@ footer .copy {
 	text-align: center;
 }
 /*푸터 영역*/
-
-/*모바일 화면 구현*/
-@media(max-width: 480px) {
-	/*기본 설정*/
-	.container {
-		width: 400px;
-	}
-	/*기본 설정*/
-
-	/*헤더 영역*/
-	header nav {
-		display: none;
-	}
-	header .nav-icon {
-		margin-top: 15px;
-		display: block;
-	}
-	header .nav-icon-close {
-		background-color: #fff;
-		color: #2c3e50;
-		margin-top: 0;
-	}
-	header .nav-icon-close:hover {
-		background-color: #2c3e50;
-		color: #fff;
-		border: none;
-	}
-	/*헤더 영역*/
-
-	/*비주얼 이미지 슬라이드 영역*/
-	#mainSection {
-		height: 600px;
-	}
-	#mainSection .slide-pannel .slide-inner .content-box {
-		width: 250px;
-	}
-	/*비주얼 이미지 슬라이드 영역*/
-
-	/*온라인 집들이 영역*/
-	#housewarming .wrapper {
-		display: flex;
-		flex-direction: column;
-	}
-	#housewarming .wrapper .housewarming-box {
-		margin: 20px auto;
-	}
-	/*온라인 집들이 영역*/
-
-	/*전문가 영역*/
-	#specialist .specialist-box {
-		display: flex;
-		flex-direction: column;
-	}
-	#specialist .specialist-box .flip-card {
-		margin: 20px auto;
-	}
-	#specialist .specialist-box .specialist-content {
-		width: 100%;
-	}
-	/*전문가 영역*/
-
-	/*전문가 시공 후기 영역*/
-	#review .review-box {
-		display: flex;
-		flex-direction: column;
-	}
-	#review .review-box .review {
-		margin: 20px auto;
-		width: 400px;
-	}
-	/*전문가 시공 후기 영역*/
-
-	/*푸터 영역*/
-	/*푸터 영역*/
-}
-/*모바일 화면 구현*/
